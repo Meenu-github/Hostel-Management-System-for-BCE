@@ -1,0 +1,133 @@
+.container{
+    background-image: url(https://bit.ly/3CHkvZU);
+    display:
+    display:flex;
+    flex-direction: column;
+    overflow-x:auto;
+    box-sizing: border-box;
+    
+    
+}
+
+
+
+.container5{
+    line-height:300%;
+    font-size:20px;
+    text-align: center;
+    font-weight: bolder;
+    box-sizing: content-box;
+    display: flex;
+    border: solid #76323F 4px;
+    justify-content: space-between;
+
+}
+
+.container5>img{
+    width: 60%; 
+    height: 800px; 
+ 
+}
+.section1>p {
+    
+    font-weight: lighter;
+    font-size: smaller;
+    text-align: center;
+    margin: -10px 5px -10px 0;
+    color: red;
+
+}
+
+.section1{
+
+        margin-left: 410px;
+        
+}
+.h3{
+    color: yellow;
+}
+input[type=submit]{
+            font-size: large;
+            padding: 7px;
+            background-color: #76323F;
+            color: #D7CEC7;
+            border-radius: 20px;
+            float: bottom;
+            cursor: pointer;
+            margin-top: 10px;
+}
+
+input[type=submit]:hover{
+    opacity: 0.5;
+}
+
+h1{
+    color: #dee48c;
+    font-family: 'Fontdiner Swanky', cursive;
+    text-decoration: underline;
+
+
+}
+header{
+display: flex;
+justify-content: space-between;
+background-color: rgb(85, 160, 114);
+}
+nav>ol{
+list-style: none;
+}
+nav>ol>li{
+    display: inline-flex;
+    padding: 5px;
+    margin: 5px;
+}
+nav>ol>li>a{
+  text-decoration: none;
+  color: #76323F;
+  padding: 7px;
+}
+nav>ol>li>a:hover {
+      background-color:#76323F;
+      color: #D7CEC7;
+      border-radius: 10px;
+}
+.logo {
+  border: solid black;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.book{
+    background-color: #76323F;
+    color:white;
+    border-radius: 10px;
+    margin-left: 10px;
+    padding: 7px;
+}
+.book:hover {
+    background-color: black;
+}
+footer{
+    margin-top: 50px;
+}
+#contacts {
+    background-color: #76323F;
+    padding: 20px;
+    border-radius: 200px;
+    color: white;
+    align-items: center;
+  }
+  #contacts>img{
+    float: left;
+    border: black solid;
+    margin-top: 20px;
+    margin-left: 25px;
+  }
+  #contacts>p{
+    display: inline-flex;
+    justify-content: space-evenly;
+    margin: 10px;
+  }
+  #copy1{
+      background-color: #D7CEC7;
+      font-size: smaller;
+  }
