@@ -5,9 +5,10 @@ if(isset($_POST['signupbtn'])){
   $psw = $_POST['psw'];
   $psw_repeat = $_POST['psw_repeat'];
 
-$selectquery = "SELECT * FROM `register` WHERE ('email', '=', $email)";
-if(mysqli_query($con, $selectquery)){
-  echo "<script>alert('email already exist');window.location='index.php';</script>";
+$check_email = mysqli_query($con, "SELECT email FROM register WHERE email='$email'");
+if ($check_email-> num_rows) {
+    echo "<script>alert('email already exist');window.location='index.php';</script>";
+    exit;
 }else{
   if($psw==$psw_repeat){
   $insert = "INSERT INTO `register`(`email`, `psw`) VALUES ('$email','$psw')";
