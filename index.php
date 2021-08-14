@@ -16,10 +16,10 @@ if(mysqli_query($con, $selectquery)){
     echo "<script>alert('data inserted')</script>";
   }else{
     echo " Something went wrong..";
-  }
+      }
   }else{
     echo "<script>alert('password and confirm password does not match')</script>";
-  }
+      }
   } 
 }
 ?>

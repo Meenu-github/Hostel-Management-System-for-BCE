@@ -14,4 +14,5 @@ $server = "localhost";
     }
     session_start();
     error_reporting(1);
+    
 ?>    
