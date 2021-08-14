@@ -5,11 +5,11 @@ if(isset($_POST['signupbtn'])){
   $psw = $_POST['psw'];
   $psw_repeat = $_POST['psw_repeat'];
 
-$check_email = mysqli_query($con, "SELECT email FROM register WHERE email='$email'");
-if ($check_email-> num_rows) {
+  $check_email = mysqli_query($con, "SELECT email FROM register WHERE email='$email'");
+  if ($check_email-> num_rows) {
     echo "<script>alert('email already exist');window.location='index.php';</script>";
     exit;
-}else{
+  }else{
   if($psw==$psw_repeat){
   $insert = "INSERT INTO `register`(`email`, `psw`) VALUES ('$email','$psw')";
   $query = mysqli_query($con, $insert);
@@ -23,6 +23,18 @@ if ($check_email-> num_rows) {
       }
   } 
 }
+if(isset($_POST['login'])){
+  $email = $_POST['email'];
+  $psw = $_POST['psw'];
+  $match = "SELECT * FROM register WHERE email='$email' AND psw='$psw'";
+  $result = mysqli_query($con, $match);
+  if (mysqli_num_rows($result) === 1) {
+    echo "<script>alert('Login was successfull'); window.location='index.php';</script>";
+}else{
+  echo "<script>alert('Invalid credentials'); window.location='index.php';</script>";
+}
+  }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,7 +51,7 @@ if ($check_email-> num_rows) {
             <img src="./images/LOGO.jpg" height="100px" width="100px" class="logo">
             <nav>
                 <ol>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
                     <li><a href="hostel4.html">About</a></li>
                     <li><a href="contact1.html">Contact us</a></li>
                     <li> <a class="book" href="students.html">Book Now</a></li>
@@ -61,7 +73,7 @@ if ($check_email-> num_rows) {
 
 <div id="login4">
   
-  <form class="content4" >
+  <form action="index.php" method="post" class="content4" >
     <div class="imgcontainer">
       <span onclick="document.getElementById('login4').style.display='none'" class="cancel4" title="Close Login">&times;</span>
       <img src="./images/avater.jpeg" alt="Avatar" >
@@ -69,12 +81,12 @@ if ($check_email-> num_rows) {
 
     <div class="input4">
       <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+      <input type="text" placeholder="Enter Username" name="email" required>
 
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>
         
-      <button type="submit" aria-pressed="true" id="account4">Login</button>
+      <button type="submit" aria-pressed="true" name="login" id="account4">Login</button>
       <label>
         <input type="checkbox" checked="checked" name="remember"> Remember me
         <span class="forgot">Forgot <a href="#">password?</a></span>
