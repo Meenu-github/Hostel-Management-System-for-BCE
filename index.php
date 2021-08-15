@@ -156,13 +156,12 @@ if(isset($_POST['login'])){
     <img src="./images/LOGO.jpg" height="100px" width="100px">
     <h3 style="text-align: center;">Contact Us</h3>
 
-       <p><img src="./images/facebook.jpeg" style="height: 30px;"> Facebook: @bcepatna<br><br></p>
-       <p><img src="./images/twiter.jpeg"style="height: 30px;"> Twitter:  @hostel_bcepatna<br><br></p>    
-       <p> <img src="./images/instagram.jpeg"style="height: 30px;"> instagram: @bcehostel</p>   
-       
-      
+      <p><a href="https://www.facebook.com/bcepatna"><img src="./images/facebook.jpeg" style="height: 30px;"/></a><br><br></p>
+      <p><a href="https://twitter.com/bcebkp_patna"><img src="./images/twiter.jpeg" style="height: 30px;"/></a><br><br></p>   
+      <p><a href="https://www.instagram.com/bce_bkp_official/"><img src="./images/instagram.jpeg" style="height: 30px;"/></a></p>  
+    
 </div>
-  <p style="text-align: center;" id="copy1">Copyright ©2021 Bakhtiyarpur College of Engineering Hostels, Inc. All rights reserved.Privacy & Legal Policies, created by Nitish and Meenu singh.</p>
+  <p style="text-align: center;" id="copy1">Copyright ©2021 Bakhtiyarpur College of Engineering Hostels, Inc. All rights reserved.Privacy & Legal Policies, created by Nitish and Meenu Singh.</p>
 </footer>
  
 </div>
